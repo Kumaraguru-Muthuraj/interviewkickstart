@@ -5,6 +5,10 @@ import java.util.Arrays;
 
 public class BubbleSort {
     static ArrayList<Integer> bubble_sort(ArrayList<Integer> arr) {
+        /*
+        In best case, when the data is already sorted, the comparisons would still happen,
+        but no swaps.
+         */
         int len = arr.size();
         for (int i = 0; i < len-1; i++) {
             for (int s = len - 1; s > i; s--) {

@@ -38,6 +38,11 @@ public class SelectionSort {
                     minIdx = k;
                 }
             }
+            /*
+            If the data is already sorted, the best case,
+            minIdx will be i, but we won't know and hence the swapping operation would still happen.
+            So its O(n^2).
+             */
             swap(arr, i, minIdx);
         }
     }
