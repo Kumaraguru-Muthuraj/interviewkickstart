@@ -12,9 +12,10 @@ public class MergeSort {
             helper(arr, l, m);
             helper(arr, m + 1, h);
 
+            // Merge the 2 partitions to a new aux array.
             ArrayList<Integer> aux = new ArrayList<>();
             int i = l;
-            int j = m+1;
+            int j = m + 1;
             while (i <= m && j <= h) {
                 if (arr.get(i) < arr.get(j)) {
                     aux.add(arr.get(i));
