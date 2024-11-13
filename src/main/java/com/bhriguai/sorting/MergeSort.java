@@ -45,12 +45,6 @@ public class MergeSort {
         return arr;
     }
 
-    static void swap(ArrayList<Integer> l, int i, int j) {
-        Integer temp = l.get(i);
-        l.set(i, l.get(j));
-        l.set(j, temp);
-    }
-
     static void print(ArrayList<Integer> arr) {
         for (Integer i : arr) {
             System.out.print(i + ", ");
