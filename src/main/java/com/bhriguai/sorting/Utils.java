@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Utils {
-    static void print(ArrayList<Integer> arr) {
+    static void print(String message, ArrayList<Integer> arr) {
+        System.out.print(message + " - ");
         for (Integer i : arr) {
             System.out.print(i + ", ");
         }

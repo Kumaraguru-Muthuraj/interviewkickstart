@@ -62,15 +62,13 @@ public class HeapInplace {
 
     public static void main(String[] args) {
         ArrayList<Integer> l = Utils.getNumbers(10);//new ArrayList<>(Arrays.asList(-5, 8, 9, 15, 11, 14, -13, 17, 20, 30));
-        Utils.print(l);
+        Utils.print("List", l);
 
         HeapInplace h = new HeapInplace();
         h.testPriorityQueue(l);
 
         h.buildHeap(l);
-        Utils.print(l);
-
-        System.out.println("************");
+        Utils.print("Heap", l);
 
     }
 

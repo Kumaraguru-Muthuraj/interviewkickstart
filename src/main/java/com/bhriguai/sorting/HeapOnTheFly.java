@@ -41,10 +41,10 @@ public class HeapOnTheFly {
     public static void main(String[] args) {
         //Utils.getNumbers(10);
         ArrayList<Integer> l = new ArrayList<>(Arrays.asList(-5, 8, 9, 15, 11, 14, -13, 17, 20, 30));
-        Utils.print(l);
+        Utils.print("List", l);
 
         HeapOnTheFly h = new HeapOnTheFly();
-        Utils.print(h.buildHeap(l));
+        Utils.print("Heap", h.buildHeap(l));
     }
 
 

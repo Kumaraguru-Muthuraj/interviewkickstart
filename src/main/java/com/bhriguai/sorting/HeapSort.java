@@ -36,9 +36,11 @@ public class HeapSort {
     ArrayList<Integer> buildHeap(ArrayList<Integer> list) {
         //NOTE - Storing the heap begins from the index 1. Index 0 is not used, set to MIN ELEMENT.
         list.add(0, Integer.MIN_VALUE);
-        for (int i = list.size() - 1; i > 0; i--) {
+        // It used to be list.size() - 1, but now changed to n/2
+        for (int i = list.size() / 2; i > 0; i--) {
             heapifyDownWithVirtualMax(list, i, list.size());
         }
+        Utils.print("Heap", list);
         return list;
     }
 
@@ -55,13 +57,12 @@ public class HeapSort {
 
     public static void main(String[] args) {
         //Utils.getNumbers(10);
-        ArrayList<Integer> l = Utils.getNumbers(20);//new ArrayList<>(Arrays.asList(-5, 8, 9, 15, 11, 14, -13, 17, 20, 30));
-        Utils.print(l);
+        ArrayList<Integer> l = new ArrayList<>(Arrays.asList(-5, 8, 9, 15, 11, 14, -13, 17, 20, 30, 31, -1));
+        Utils.print("List", l);
 
         HeapSort h = new HeapSort();
-        //h.buildHeap(l);
         h.heap_sort(l);
-        Utils.print(l);
+        Utils.print("Sorted ", l);
 
         System.out.println("************");
 
