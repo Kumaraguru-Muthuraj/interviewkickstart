@@ -1,6 +1,7 @@
 package com.bhriguai.sorting;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 public class HeapAlgos {
@@ -21,7 +22,7 @@ public class HeapAlgos {
     */
 
     int getMaxIdx (ArrayList<Integer> list, int l, int r) {
-        if (l >= list.size() && r >= list.size()) {
+        if (l >= list.size()) {
             return Integer.MIN_VALUE;
         }
         if (r < list.size() && list.get(l) < list.get(r)) {
@@ -44,19 +45,20 @@ public class HeapAlgos {
     ArrayList<Integer> buildHeap(ArrayList<Integer> list) {
         //Use index from 1, not 0;
         list.add(0, Integer.MIN_VALUE);
-        for (int idx = list.size(); idx > 0; idx--) {
-            int pIdx = Math.floorDiv(idx, 2);
-            heapifyDown(list, pIdx);
+        for (int idx = list.size() - 1; idx > 0; idx--) {
+            heapifyDown(list, idx);
         }
         return list;
     }
 
     public static void main(String[] args) {
-        ArrayList<Integer> l = Utils.getNumbers(10);
+        //Utils.getNumbers(10);
+        ArrayList<Integer> l = Utils.getNumbers(10);//new ArrayList<>(Arrays.asList(-5, 8, 9, 15, 11, 14, -13, 17, 20, 30));
         Utils.print(l);
 
         HeapAlgos h = new HeapAlgos();
         h.buildHeap(l);
+        Utils.print(l);
     }
 
 
