@@ -1,6 +1,5 @@
 package com.bhriguai.sorting;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -17,10 +16,6 @@ public class HeapOnTheFly {
     * Repeat the same till the heap's virtual size reduces to 1.
     */
 
-    /*
-    * Sorting the max-heap in-place. Swap the root with the last element. So the last element found its place.
-    * Reduce the heap size virtually by 1. Heapify from the root.
-    */
     void heapifyUp(ArrayList<Integer> h, int i) {
         if (i <= 1) {
             return;
