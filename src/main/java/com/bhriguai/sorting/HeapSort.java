@@ -27,8 +27,7 @@ public class HeapSort {
             return;
         }
         // BE SURE THAT THE HEAPIFY IS CALLED ON THE CHILD, CALLING HEAPIFY ON THE i
-        // would just compare the 2 children and swap. This is because of the
-        // assumption in getMaxIdxOfChild() that, we compare only children adn return.
+        // would just compare the 2 children and return. IT WON'T GO DOWN.
         if (h.get(mI) > h.get(i)) {
             Collections.swap(h, mI, i);
             heapifyDownWithVirtualMax(h, mI, size);
