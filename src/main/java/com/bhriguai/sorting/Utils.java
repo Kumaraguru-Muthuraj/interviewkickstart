@@ -16,7 +16,7 @@ public class Utils {
         Random r = new Random();
         ArrayList<Integer> l = new ArrayList<>();
         for (int i = 0; i < cnt; i++) {
-            l.add(r.nextInt(cnt));
+            l.add(r.nextInt(cnt*2));
         }
         return l;
     }
