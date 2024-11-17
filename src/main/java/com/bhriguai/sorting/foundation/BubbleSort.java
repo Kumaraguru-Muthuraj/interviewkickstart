@@ -1,4 +1,4 @@
-package com.bhriguai.sorting;
+package com.bhriguai.sorting.foundation;
 
 import java.util.ArrayList;
 import java.util.Arrays;

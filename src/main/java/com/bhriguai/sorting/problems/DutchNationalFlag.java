@@ -1,2 +1,4 @@
-package com.bhriguai.sorting.problems;public class DutchNationalFlag {
+package com.bhriguai.sorting.problems;
+
+public class DutchNationalFlag {
 }

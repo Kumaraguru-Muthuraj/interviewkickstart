@@ -1,2 +1,4 @@
-package com.bhriguai.sorting.problems;public class OnlineMedian {
+package com.bhriguai.sorting.problems;
+
+public class OnlineMedian {
 }

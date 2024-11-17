@@ -1,2 +1,4 @@
-package com.bhriguai.sorting.problems;public class NearestNeighbours {
+package com.bhriguai.sorting.problems;
+
+public class NearestNeighbours {
 }

@@ -1,2 +1,4 @@
-package com.bhriguai.sorting.problems;public class TwoSumInSortedArray {
+package com.bhriguai.sorting.problems;
+
+public class TwoSumInSortedArray {
 }

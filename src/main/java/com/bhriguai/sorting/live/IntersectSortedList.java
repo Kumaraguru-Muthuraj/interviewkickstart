@@ -1,2 +1,4 @@
-package com.bhriguai.sorting.live;public class IntersectSortedList {
+package com.bhriguai.sorting.live;
+
+public class IntersectSortedList {
 }

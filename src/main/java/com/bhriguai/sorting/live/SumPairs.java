@@ -1,4 +1,4 @@
-package com.bhriguai.sorting;
+package com.bhriguai.sorting.live;
 
 public class SumPairs {
     /* Given an array arr[] of n integers and a target value, the task is to find the number of pairs of integers in the array whose sum is equal to target.
