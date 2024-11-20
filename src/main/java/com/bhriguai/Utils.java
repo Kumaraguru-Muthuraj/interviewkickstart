@@ -1,4 +1,4 @@
-package com.bhriguai.sorting;
+package com.bhriguai;
 
 import java.util.ArrayList;
 import java.util.Random;

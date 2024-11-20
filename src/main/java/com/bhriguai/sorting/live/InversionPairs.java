@@ -1,6 +1,6 @@
 package com.bhriguai.sorting.live;
 
-import com.bhriguai.sorting.Utils;
+import com.bhriguai.Utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -20,7 +20,7 @@ Write an iterative version soon.
  */
 
 
-public class FindKthLargest {
+public class FindKthLargestIterative {
     /*Return the index of the element that found its home.
     When index is returned, check if it's (size-k)
     */

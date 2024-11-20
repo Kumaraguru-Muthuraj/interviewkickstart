@@ -1,6 +1,6 @@
 package com.bhriguai.sorting.problems;
 
-import com.bhriguai.sorting.Utils;
+import com.bhriguai.Utils;
 
 import java.util.*;
 
