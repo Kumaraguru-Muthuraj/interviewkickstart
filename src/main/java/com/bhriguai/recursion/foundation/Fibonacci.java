@@ -1,4 +1,4 @@
-package com.bhriguai.recursion;
+package com.bhriguai.recursion.foundation;
 
 public class Fibonacci {
     public static int fib(int n) {
