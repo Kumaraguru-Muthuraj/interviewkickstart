@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class GenerateAllSubsets {
+public class GenerateAllSubsets0 {
     static void printSubsets(List<Character> lst) {
         generateSubsets("", lst);
     }
