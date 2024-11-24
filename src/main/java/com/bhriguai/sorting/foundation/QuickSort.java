@@ -59,7 +59,9 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(10, 7, 5, 3, 8, 6, 4, 2));
+        //ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(10, 7, 5, 3, 8, 6, 4, 2));
+        //ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(10, 23, 7, 33, 11, 0, 3, 7, 4, 8, 7));
+        ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(1, 0, 1, 2, 1, 0, 1, 2, 0, 0,9, 10, -5, -4));
         quick_sort(nums);
         print(nums);
     }
