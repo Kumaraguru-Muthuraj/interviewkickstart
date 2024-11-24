@@ -40,5 +40,10 @@ public class BinaryStringsLenN {
        for (String p : perms) {
            System.out.println(p);
        }*/
+        char[] c = new char[4];
+        c[0] = '3';c[1] = '4';
+        c[1] = '\0';
+        c[2] = '5';
+        System.out.println("***" + c[0] + c[1] + c[2]);
     }
 }

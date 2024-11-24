@@ -109,7 +109,7 @@ public class DutchNationalFlag {
     }
 
     public static void main(String[] args) {
-        dutch_flag_sort(Arrays.asList('B', 'R', 'G', 'G'));
+       // dutch_flag_sort(Arrays.asList('B', 'R', 'G', 'G'));
         /////
         List<Color> l = new ArrayList<>();
         Random r = new Random();
