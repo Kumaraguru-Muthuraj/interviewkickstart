@@ -16,7 +16,7 @@ public class HeapInplace {
     * Repeat the same till the heap's virtual size reduces to 1.
     */
 
-    int getMaxIdx (ArrayList<Integer> list, int l, int r) {
+    int getMaxIdx (List<Integer> list, int l, int r) {
         if (l >= list.size()) {
             return Integer.MIN_VALUE;
         }
@@ -26,7 +26,7 @@ public class HeapInplace {
         return l;
     }
 
-    void heapifyDown(ArrayList<Integer> list, int rI) {
+    void heapifyDown(List<Integer> list, int rI) {
         int cI = getMaxIdx(list, rI * 2, rI * 2 + 1);
         if (cI <= 0) {
             return;
@@ -37,7 +37,7 @@ public class HeapInplace {
         }
     }
 
-    ArrayList<Integer> buildHeap(ArrayList<Integer> list) {
+    List<Integer> buildHeap(List<Integer> list) {
         //Use index from 1, not 0;
         list.add(0, Integer.MIN_VALUE);
         for (int idx = list.size() - 1; idx > 0; idx--) {
@@ -46,7 +46,7 @@ public class HeapInplace {
         return list;
     }
 
-    void testPriorityQueue(ArrayList<Integer> list) {
+    void testPriorityQueue(List<Integer> list) {
         Comparator<Integer> c = new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
@@ -63,7 +63,7 @@ public class HeapInplace {
     }
 
     public static void main(String[] args) {
-        ArrayList<Integer> l = Utils.getNumbers(10);//new ArrayList<>(Arrays.asList(-5, 8, 9, 15, 11, 14, -13, 17, 20, 30));
+        List<Integer> l = Utils.getNumbers(10);//new ArrayList<>(Arrays.asList(-5, 8, 9, 15, 11, 14, -13, 17, 20, 30));
         Utils.print("List", l);
 
         HeapInplace h = new HeapInplace();

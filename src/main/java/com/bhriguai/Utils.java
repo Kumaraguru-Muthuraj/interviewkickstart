@@ -1,10 +1,11 @@
 package com.bhriguai;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Utils {
-    public static void print(String message, ArrayList<Integer> arr) {
+    public static void print(String message, List<Integer> arr) {
         System.out.print(message + " - ");
         for (Integer i : arr) {
             System.out.print(i + ", ");
@@ -12,9 +13,9 @@ public class Utils {
         System.out.println();
     }
 
-    public static ArrayList<Integer> getNumbers(int cnt) {
+    public static List<Integer> getNumbers(int cnt) {
         Random r = new Random();
-        ArrayList<Integer> l = new ArrayList<>();
+        List<Integer> l = new ArrayList<>();
         for (int i = 0; i < cnt; i++) {
             l.add(r.nextInt(cnt*2));
         }
