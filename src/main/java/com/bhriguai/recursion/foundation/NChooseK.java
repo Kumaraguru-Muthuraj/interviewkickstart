@@ -96,6 +96,7 @@ public class NChooseK {
             Collections.copy(soln, slate);
             solutions.add(soln);
         } else {
+            //It should be start <= n-k+1
             for (;start <= n; start++) {
                 slate.add(start);
                 NChooseKHelper(solutions, slate, start+1, n, k);
