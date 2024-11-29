@@ -37,9 +37,7 @@ public class BinarySearchTree {
     }
 
     public void printInorder(Node root) {
-        if (root == null) {
-            return;
-        } else {
+        if (root != null) {
             printInorder(root.left);
             System.out.print(root.value + ", ");
             printInorder(root.right);
