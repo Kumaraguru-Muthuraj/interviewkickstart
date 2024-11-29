@@ -19,11 +19,10 @@ public class BinarySearchTree {
                Node par = root;
                Node cur = root;
                while (cur != null) {
+                   par = cur;
                    if (i <= cur.value) {
-                       par = cur;
                        cur = cur.left;
                    } else {
-                       par = cur;
                        cur = cur.right;
                    }
                }
