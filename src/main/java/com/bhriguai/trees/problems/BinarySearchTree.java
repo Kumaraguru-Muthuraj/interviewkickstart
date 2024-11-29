@@ -44,12 +44,17 @@ public class BinarySearchTree {
         }
     }
 
-    public static void main(String[] args) {
-        BinarySearchTree bst = new BinarySearchTree();
+    public void generateBst() {
         List<Integer> l = Utils.getNumbers(10);
         Utils.print("List", l);
-        bst.buildBst(l);
-        bst.printInorder(bst.root);
+        this.buildBst(l);
+        this.printInorder(this.root);
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        BinarySearchTree bst = new BinarySearchTree();
+        bst.generateBst();
     }
 
 }
