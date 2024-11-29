@@ -43,7 +43,7 @@ public class GenerateAllSubsets0 {
         Character a[]
                 = new Character[] { 'x', '2', '3'};
         //printSubsets(Arrays.asList(a));
-        ArrayList<String> l = generate_all_subsets("123");
+        ArrayList<String> l = generate_all_subsets("1234");
         for (String s : l) {
             System.out.println(s);
         }

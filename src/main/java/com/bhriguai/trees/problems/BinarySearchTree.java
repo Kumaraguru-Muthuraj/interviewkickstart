@@ -1,0 +1,58 @@
+package com.bhriguai.trees.problems;
+
+
+import com.bhriguai.Utils;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class BinarySearchTree {
+    private Node root = null;
+    public Node getRoot() {
+        return root;
+    }
+    public Node buildBst(List<Integer> l) {
+        for (Integer i : l) {
+           if (root == null) {
+               root = new Node(i);
+           } else {
+               Node par = root;
+               Node cur = root;
+               while (cur != null) {
+                   if (i <= cur.value) {
+                       par = cur;
+                       cur = cur.left;
+                   } else {
+                       par = cur;
+                       cur = cur.right;
+                   }
+               }
+               if (i <= par.value) {
+                   par.left = new Node(i);
+               } else {
+                   par.right = new Node(i);
+               }
+           }
+        }
+        return root;
+    }
+
+    public void printInorder(Node root) {
+        if (root == null) {
+            return;
+        } else {
+            printInorder(root.left);
+            System.out.print(root.value + ", ");
+            printInorder(root.right);
+        }
+    }
+
+    public static void main(String[] args) {
+        BinarySearchTree bst = new BinarySearchTree();
+        List<Integer> l = Utils.getNumbers(10);
+        Utils.print("List", l);
+        bst.buildBst(l);
+        bst.printInorder(bst.root);
+    }
+
+}
