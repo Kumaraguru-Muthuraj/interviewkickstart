@@ -46,13 +46,40 @@ public class BinarySearchTree {
         }
     }
 
+    public Integer getRandomNode() {
+        return 0;
+    }
+
     public void generateBst() {
         Set<Integer> s = Utils.getUniqueNumbers(10);
-        List<Integer> l = new ArrayList<>(s);
+        List<Integer> l = Arrays.asList(50, 20, 75, 100, 25, 150, 10, 5, 1);//new ArrayList<>(s);
         Utils.print("List", l);
         this.buildBst(l);
         this.printInorder(this.root);
         System.out.println();
+    }
+
+    public static Integer getMin(Node r) {
+        Node cur = r;
+        if (cur == null) {
+            return null;
+        } else {
+            while (cur.left != null) {
+                cur = cur.left;
+            }
+            return cur.value;
+        }
+    }
+    public static Integer getMax(Node r) {
+        Node cur = r;
+        if (cur == null) {
+            return null;
+        } else {
+            while (cur.right != null) {
+                cur = cur.right;
+            }
+            return cur.value;
+        }
     }
 
     public static void main(String[] args) {
