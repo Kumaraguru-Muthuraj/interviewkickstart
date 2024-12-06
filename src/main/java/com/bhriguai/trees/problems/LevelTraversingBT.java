@@ -2,7 +2,7 @@ package com.bhriguai.trees.problems;
 
 import java.util.*;
 
-public class LevelTraversing {
+public class LevelTraversingBT {
     public static void levelTrav(BinarySearchTree t) {
         System.out.print("Level traverse - ");
         Node r = t.getRoot();

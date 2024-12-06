@@ -3,8 +3,10 @@ package com.bhriguai.trees.problems;
 
 import com.bhriguai.Utils;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 
 public class BinarySearchTree {
     private Node root = null;
@@ -45,7 +47,8 @@ public class BinarySearchTree {
     }
 
     public void generateBst() {
-        List<Integer> l = Utils.getNumbers(10);
+        Set<Integer> s = Utils.getUniqueNumbers(10);
+        List<Integer> l = new ArrayList<>(s);
         Utils.print("List", l);
         this.buildBst(l);
         this.printInorder(this.root);

@@ -1,8 +1,6 @@
 package com.bhriguai;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Utils {
     public static void print(String message, List<Integer> arr) {
@@ -27,6 +25,17 @@ public class Utils {
         List<Integer> l = new ArrayList<>();
         for (int i = 0; i < cnt; i++) {
             l.add(r.nextInt(cnt*2));
+        }
+        return l;
+    }
+
+    public static Set<Integer> getUniqueNumbers(int cnt) {
+        int range = 3*cnt;
+        Random r = new Random();
+        Set<Integer> l = new LinkedHashSet<>();
+        l.add(range/2);
+        while (l.size() <= cnt) {
+            l.add(r.nextInt(range));
         }
         return l;
     }

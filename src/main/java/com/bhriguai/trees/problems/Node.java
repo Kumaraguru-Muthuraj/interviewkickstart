@@ -6,7 +6,7 @@ public class Node {
         this.left = null;
         this.right = null;
     }
-    Integer value;
-    Node left;
-    Node right;
+    public Integer value;
+    public Node left;
+    public Node right;
 };

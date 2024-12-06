@@ -112,7 +112,7 @@ public class NChooseK {
     }
 
     public static void main(String[] args){
-        List<List<Integer>> sols = find_combinations(5,2);
+        List<List<Integer>> sols = find_combinations(5,3);
         for (List<Integer> s : sols) {
             Utils.print("", s);
         }
