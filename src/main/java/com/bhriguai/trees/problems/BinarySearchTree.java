@@ -51,8 +51,8 @@ public class BinarySearchTree {
     }
 
     public void generateBst() {
-        Set<Integer> s = Utils.getUniqueNumbers(10);
-        List<Integer> l = Arrays.asList(50, 20, 75, 100, 25, 150, 10, 5, 1);//new ArrayList<>(s);
+        Set<Integer> s = Utils.getUniqueNumbers(20);
+        List<Integer> l = new ArrayList<>(s); //Arrays.asList(50, 20, 75, 100, 25, 150, 10, 5, 1);
         Utils.print("List", l);
         this.buildBst(l);
         this.printInorder(this.root);

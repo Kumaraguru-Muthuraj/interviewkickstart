@@ -15,7 +15,6 @@ public class MinMaxBST {
         System.out.println("Min - " + mmBst.bst.getMin(mmBst.bst.getRoot()));
         System.out.println("Max - " + mmBst.bst.getMax(mmBst.bst.getRoot()));
         ArrayList<Integer> l;
-        l.is;
 
     }
 }
