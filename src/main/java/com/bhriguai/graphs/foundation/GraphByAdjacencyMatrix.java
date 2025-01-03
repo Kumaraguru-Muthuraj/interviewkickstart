@@ -1,6 +1,5 @@
 package com.bhriguai.graphs.foundation;
 
-import java.util.Arrays;
 
 public class GraphByAdjacencyMatrix {
     public GraphByAdjacencyMatrix(int V) {
