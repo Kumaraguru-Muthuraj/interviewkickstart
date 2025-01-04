@@ -45,7 +45,7 @@ public class GenerateAllSubsets0 {
         //printSubsets(Arrays.asList(a));
         ArrayList<String> l = generate_all_subsets("1234");
         for (String s : l) {
-            System.out.println(s);
+            System.out.println("S - " + s);
         }
     }
 }
