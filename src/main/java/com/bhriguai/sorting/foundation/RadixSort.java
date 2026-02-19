@@ -6,7 +6,8 @@ import java.util.HashMap;
 
 import static com.bhriguai.sorting.foundation.QuickSort.print;
 
-//RADIXSORT
+//RADIXSORT - This worked but took a lot of time for large set. Perhaps the object creation with version took time.
+//only 15/19 cases succeeded.
 //Implement bucket/counting and radix sort
 public class RadixSort {
    static class NumAndIter {
@@ -19,29 +20,35 @@ public class RadixSort {
     }
     static ArrayList<Integer> radix_sort(ArrayList<Integer> arr) {
         int iterCount = 1;
-        boolean allDone = false;
+        int maxIter = Integer.MIN_VALUE;
         HashMap<Integer, ArrayList<NumAndIter>> bucket = new HashMap<>();
 
         //First iteration.
         int mod = (int) Math.pow(10, iterCount);
         for (Integer i : arr) {
-            int num = i % mod;
-            int buckId = num / 10;
+            int numDigits = (int) Math.floor(Math.log10(i)) + 1;
+            maxIter = Math.max(maxIter, numDigits);
+            int buckId = i % mod;
 
-            bucket.put(buckId, new ArrayList<NumAndIter>());
+            bucket.putIfAbsent(buckId, new ArrayList<NumAndIter>());
             ArrayList<NumAndIter> nums = bucket.get(buckId);
             nums.add(new NumAndIter(i, iterCount));
         }
-
+        maxIter += 1;
         iterCount++;
         //Further iterations
-        while (bucket.size() > 1) {
+        while (iterCount <= maxIter + 1) {
             mod = (int) Math.pow(10, iterCount);
-            for (ArrayList<NumAndIter> fromNums : bucket.values()) {
+            //There can only be 10 buckets from 0 - 9
+            for (int i = 0; i < 10; i++) {
+                ArrayList<NumAndIter> fromNums = bucket.get(i);
+                if (fromNums == null || fromNums.size() == 0) {
+                    continue;
+                }
                 int idx = 0;
                 while (fromNums.size() > 0) {
-                    if (fromNums.get(idx).iter == (iterCount - 1)) {
-                        continue;
+                    if (fromNums.get(idx).iter > (iterCount - 1)) {
+                        break;
                     }
                     NumAndIter numAndIter = fromNums.remove(idx);
                     int num = numAndIter.num % mod;
@@ -50,7 +57,7 @@ public class RadixSort {
 
                     bucket.putIfAbsent(buckId, new ArrayList<NumAndIter>());
                     ArrayList<NumAndIter> toNums = bucket.get(buckId);
-                    toNums.add(new NumAndIter(numAndIter.num, iterCount + 1));
+                    toNums.add(new NumAndIter(numAndIter.num, iterCount));
                 }
             }
             iterCount++;
@@ -67,8 +74,7 @@ public class RadixSort {
 
 
     public static void main(String[] args) {
-        ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(30, 7, 23, 30, 7, 23, 5, 30, 5, -100, -200, -100, -1000, 6,
-                23, 7, 6, 3, -999,2, 9, 10, 9, 10, 9, 10, 6, 5, 3, 2));
+        ArrayList<Integer> nums = new ArrayList<>(Arrays.asList(5, 8, 3, 9, 4, 1, 7));
         print(radix_sort(nums));
     }
 }
