@@ -11,6 +11,7 @@ public class InsertionSort {
         for (int i = 0; i < arr.size() - 1;i++) {
             int elem = arr.get(i + 1);
             int k = i;
+            //Shift the elements that are greater to the right, insert elem at the right place.
             for (;  k >= 0  && arr.get(k) > elem; k--) {
                 arr.set(k + 1, arr.get(k));
             }

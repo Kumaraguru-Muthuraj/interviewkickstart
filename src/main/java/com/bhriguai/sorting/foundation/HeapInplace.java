@@ -4,6 +4,7 @@ import com.bhriguai.Utils;
 
 import java.util.*;
 
+//INPLACEHEAP
 public class HeapInplace {
     //NOTE - Storing the heap begins from the index 1. Index 0 is not used, set to MIN ELEMENT.
 
