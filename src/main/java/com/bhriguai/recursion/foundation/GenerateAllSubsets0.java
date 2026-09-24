@@ -18,6 +18,7 @@ public class GenerateAllSubsets0 {
         }
     }
 
+    //D:\FromD\epijava\src\main\java\epi2\PowerSet.java - Uses a slate of StringBuilder. Use that.
     static ArrayList<String> list;
     static ArrayList<String> generateSubsets2(String slate, List<Character> lst) {
         if (lst.size() == 0) {
